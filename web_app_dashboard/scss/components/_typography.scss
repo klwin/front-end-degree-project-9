@@ -1,0 +1,81 @@
+/* ---- Fonts Styling ---- */
+body {
+  font-family: $font-family--primary;
+}
+h4 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+.main-header, .alert {
+  color: $white;
+}
+.main-header h1 {
+  font-size: 1.3em;
+  @include mq(medium) {
+    font-size: 2em;
+  }
+}
+.bold {
+  font-weight: bolder;
+}
+.trade-mark {
+  font-size: 1em;
+}
+.profileName {
+  text-transform: capitalize;;
+  font-size: 0.9em;
+}
+.name {
+  font-size: 1em;
+  @include mq(medium) {
+    font-size: 1.5em;
+  }
+}
+.tablinks {
+  font-size: 1em;
+  color: $grey;
+  @include mq(medium) {
+    font-size: 1.2em;
+  }
+}
+.alert p {
+  font-size: 0.8em;
+}
+.main-content {
+  font-size: 0.8em;
+  @include mq(medium) {
+    font-size: 1em;
+  }
+}
+.container-traffic, .container-flex, .container-social, .members-container, .toggle, .message-container, .settings-container {
+  color: $grey;
+}
+.container-traffic a {
+  padding: 0.4em;
+  color: $grey;
+}
+.container-traffic .selected {
+  background-color: $emerald;
+  color: $white;
+  border-radius: 10px;
+}
+.follower {
+  font-size: 3em;
+}
+.profile-email {
+  color: blue;
+  font-size: 0.9em;
+}
+.arrow {
+  display: none;
+  @include mq(medium) {
+    display: inherit;
+    font-size: 2em;
+    color: $purple-majesty;
+  }
+}

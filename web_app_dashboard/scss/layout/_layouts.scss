@@ -1,0 +1,277 @@
+/* ---- Layout CSS ---- */
+.main-header {
+  background-color: $purple-majesty;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: 
+    "l l l b"
+    "p p p p";
+  @include mq(large) {
+    @include flex(flex, row, center, space-around);
+  }
+}
+.logo {
+  grid-area: l;
+  float: left;
+  @include mq(large) {
+    flex: 4;
+    padding: 0.5em;
+  }
+}
+.bell-container {
+  grid-area: b;
+  justify-self: right;
+  cursor: pointer;
+  @include mq(large) {
+    padding-right: 1em;
+    border-right: 1px solid $black;
+  }
+}
+#profilePic {
+  @include mq(large) {
+    padding: 0 0.5em;
+  }
+}
+.profile {
+  grid-area: p;
+  text-align: center;
+  @include mq(large) {
+    @include flex(flex, row, flex-start, space-around);
+    padding-left: 0.5em;
+  }
+}
+.name {
+  @include mq(large) {
+    padding-top: 0.5em;
+  }
+}
+.main-wrapper {
+  @include mq(large) {
+    @include flex(flex, row, initial, initial);
+  }
+}
+.row {
+  @include flex(flex, row, initial, space-around);
+}
+.col {
+  flex: 1;
+}
+#dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: -30%;
+    color: $white;
+    background-color: $purple-majesty;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    @include mq(medium) {
+      margin-left: 70%;
+    }
+    @include mq(large) {
+      margin-left: 0;
+    }
+}
+#dropdown-content a {
+    color: $white;
+    padding: 12px 16px;
+    border: 1px solid $white;
+    text-decoration: none;
+    display: block;
+}
+.profile-container {
+  justify-content: center;
+}
+.sidebar {
+  @include flex(flex, row, initial, space-around);
+  background-color: #4D4C72;
+  fill: $white;
+  padding: 1em 0;
+  padding-left: 10%;
+  @include mq(large) {
+    @include flex(flex, column, flex-start, space-around);
+    padding: 1em;
+    height: 400px;
+  }
+}
+.left-side {
+  @include mq(large) {
+    background-color: $dark-purple;
+    @include flex(flex, column, initial, initial);
+  }
+}
+.right-side {
+  @include mq(large) {
+    width: 100%;
+  }
+}
+.tablinks {
+  flex: 1;
+  padding: 0 1em;
+  border-right: 1px solid black;
+}
+.search-container {
+  background-color: $lightest-grey;
+  flex: 4;
+  @include flex(flex, row, initial, flex-end);
+}
+.search-container button {
+  background: $white;
+  font-size: 1em;
+  width: 50px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  margin: 1.5em;
+  color: $dark-purple;
+  margin-left: -4em;
+}
+#search {
+  width: 80%;
+  font-size: 1em;
+  margin: 1em 0;
+  background-color: $white;
+  @include mq(medium) {
+    width: 50%;
+    font-size: 1em;
+  }
+}
+
+.alert {
+  background-color: $purple-majesty;
+}
+.alert p {
+  padding: 0.5em;
+}
+.alert button {
+  margin: 0 0.2em 0 auto;
+  color: $white;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+#alert-submit, #alert-submit-fail {
+  display: none;
+}
+.main-content {
+  padding: 1em;
+}
+#traffic, #dailyTraffic, #mobileUsers, .newmembers, .container-social, .activity-container, .message-container {
+  margin-bottom: 2em;
+}
+.newMembers, .activity-container, .message-container, .settings-container, .daily-traffic, .mobile-users {
+  @include mq(medium) {
+    flex: 1;
+  }
+}
+.newMembers {
+  @include mq(medium) {
+    border-right: 1px solid black;
+    padding-top: 1em; 
+  }
+}
+.newMembers, .message-container {
+  @include mq(medium) {
+    padding-right: 1em;
+  }
+}
+.message-container, .daily-traffic {
+  @include mq(medium) {
+    border-right: 1px solid black;
+  }
+}
+.settings-container {
+  @include mq(medium) {
+    padding-left: 1em;
+  }
+}
+.settings-container, .message-container, .daily-traffic, .mobile-users {
+  @include mq(medium) {
+    padding: 1em;
+  }
+}
+.activity-container {
+  @include mq(medium) {
+    padding-left: 1em;
+    padding-top: 1em; 
+  }
+}
+.container-social h4 {
+  @include mq(medium) {
+    padding-top: 1em;
+  }
+}
+.members-container, .bot-container {
+  @include mq(medium) {
+    @include flex(flex, row, flex-start, space-around);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
+.bot-container {
+  @include mq(medium) {
+    border-top: none;
+    border-bottom: none;
+  }
+}
+.button-container {
+  @include mq(medium) {
+  @include flex(flex, row, initial, space-around);
+  }
+}
+.container-flex {
+  @include mq(medium) {
+    @include flex(flex, row, initial, space-between);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
+.social-wrapper {
+  @include flex(flex, row, center, center);
+  background-color: $lightest-grey;
+  padding: 2em 1em;
+  border: 1px solid $black;
+  border-radius: 10px;
+  margin: 0 1em 1em 0;
+  @include mq(medium) {
+    width: 100%;
+  }
+}
+.social-text {
+  margin-left: 30px;
+}
+.social-charts {
+  @include mq(medium) {
+    @include flex(flex, row, center, space-around);
+  }
+}
+.membername {
+  @include flex(flex, row, center, flex-start);
+  padding: 1em;
+  border-bottom: 1px solid black;
+}
+.member-text {
+  margin-left: 20px;
+  margin-right: auto;
+}
+.newMembers h4{
+  margin-bottom: 0;
+}
+.activity-container h4{
+  margin-bottom: 0;
+}
+.last-member {
+  @include mq(medium) {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+}
+.toggle {
+  margin-bottom: 0.5em;
+}
+.hide {
+  display: none;
+}

@@ -1,0 +1,27 @@
+// ==== Font Stacks ====
+$font-url--google		: 'https://fonts.googleapis.com/css?family=Roboto|Sunflower:300';
+$font-family--primary	: 'Roboto', sans-serif;
+
+// ==== Base Colors ====
+$white 			: #fff;
+$dark-white		: #f4f4f4;
+$darker-white	: #f2f2f2;
+$black 			: #000;
+$grey  			: #797e83;
+$light-grey 	: #aaa;
+$lighter-grey	: #ccc;
+$lightest-grey	: #eee;
+
+// ==== UI Colors ====
+$emerald        : #81C98F;
+$purple-majesty : #7477BF;
+$dark-purple	: #4D4C72;
+$sky-blue		: #2196F3;
+
+// ==== Border radius ====
+$br--round      : 50%;
+
+// ==== Breakpoints ====
+$brkpoint-sm    : 319px;
+$brkpoint-md    : 767px;
+$brkpoint-lg    : 1024px;

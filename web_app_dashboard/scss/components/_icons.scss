@@ -1,0 +1,17 @@
+#bell {
+  fill: $white;
+  cursor: pointer;
+  @include mq(medium) {
+    padding-left: 75%;
+  }
+}
+.social-icons {
+  padding: 10px;
+  background-color: $purple-majesty;
+  border-radius: $br--round;
+}
+
+.social-wrapper h3 {
+  color: $purple-majesty;
+  font-size: 1.5em;
+}
